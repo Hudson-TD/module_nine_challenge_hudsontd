@@ -24,6 +24,7 @@ function renderLicenseSection(license) {
 
 }
 
+// Markdown formatting and data insertion
 function generateMarkdown(data) {
   return `
   #  ${data.title}
@@ -35,7 +36,7 @@ function generateMarkdown(data) {
 - [Usage](#usage)
 ${renderLicenseLink(data.license)}
 - [Contributing](#contributing)
-- [Test](#Test)
+- [Tests](#tests)
 - [Questions](#questions)
 ## Installation
   ${data.installation}
@@ -44,12 +45,12 @@ ${renderLicenseLink(data.license)}
 ${renderLicenseSection(data.license)}
 ## Contributing
   ${data.contributing}
-## Test
-  ${data.test}
+## Tests
+  ${data.tests}
 ## Questions
 Please email any questions to: ${data.email} 
   
-  Find me on GitHub: [${data.username}](https://github.com/${data.username})`;
+Find me on GitHub: [${data.username}](https://github.com/${data.username})`;
 }
 
 module.exports = generateMarkdown;

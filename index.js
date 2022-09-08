@@ -1,7 +1,9 @@
+// Global variables
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
+// Questions array
 inquirer.prompt([
     {
         type: 'input',
@@ -28,11 +30,10 @@ inquirer.prompt([
         message: 'Choose the appropriate license for your project.',
         name: 'license',
         choices: [
-            { value: 'placeholder' },
-            { value: 'placeholder' },
-            { value: 'placeholder' },
-            { value: 'placeholder' },
-            { value: 'placeholder' },
+            { value: 'MIT' },
+            { value: 'Apache License 2.0' },
+            { value: 'Mozilla Public License 2.0' },
+            { value: 'General Public License (GPLv3' },
             { value: 'None' }, 
         ]
     },
@@ -44,7 +45,7 @@ inquirer.prompt([
     {
         type: 'input',
         message: 'Provide tests for project, and explain how to test.',
-        name: 'test',
+        name: 'tests',
     },
     {
         type: "input",
@@ -63,6 +64,7 @@ inquirer.prompt([
             err ? console.error(err) : console.log("Success, your README has been created!"))
     })
 
-function init() { }
+function init() {
+ }
 
 init();
